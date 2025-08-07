@@ -7,8 +7,16 @@ public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
 
 	@Override
 	public void insertFirst(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (isEmpty()) {
+			this.head.data = element;
+			this.tail.data = element;
+		} else if (head == tail) {
+			this.tail = head;
+			this.head.data = element;
+		} else {
+			this.head.setPrevious(element);
+			this.
+		}
 	}
 
 	@Override
